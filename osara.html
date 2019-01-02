@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="generator"
+          content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39"/>
+    <title>Android Repository Analyzer - oSARA</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/w3.css"/>
+    <link rel="stylesheet" href="assets/w3-theme-teal.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <style>
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        td {
+            text-align: left;
+            padding: 5px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+    <div class="w3-center">
+        <a href='index.html' class='w3-bar-item w3-button w3-hover-theme'>
+            <h4>Android Repository Analyzer</h4>
+        </a>
+        <h1 class="w3-xxxlarge w3-animate-bottom">oSARA</h1>
+    </div>
+</header>
+<div class=" w3-padding-32">
+    <div class="w3-card w3-container">
+        <p>oSARA analyzes the AndroidManifest.xml file associated with Android code repositories to capture the history
+            of all permission changes. The motivation for building this tool was to understand the types of users that
+            make permission changes to apps, how frequently the persmissions are added & reverted and when in the app's
+            commit history the changes are made.</p>
+
+        <p>
+        <h3>Setup & Running</h3>
+        The tool was developed as a Windows Form Application using Visual Studio 2017. It utilizes F-Droid's collection
+        of open source Android code repositories to perform the analysis on. Presently, the tool targets repositories
+        hosted on GitHub. The source code for the tool is available <a href="https://github.com/MobileEvolution/oSARA" target="_blank">here</a>.
+
+        To run the tool, either:
+
+        <ol>
+        <li>clone/download the GitHub repository. Open the solution in Visual Studio and build the project</li>
+        <li>extract the files from the executable.zip archive and run 'AndroidCodeAnalyzer.exe'</li>
+        </ol>
+            It is recommend that the following sequence be followed when running the tool:
+        <ol>
+            <li><a href="#sc_02">F-Droid Repository</a> </li>
+            <li><a href="#sc_03">Download Android Projects</a> </li>
+            <li><a href="#sc_04">Get Project Commit History</a> </li>
+            <li><a href="#sc_05">Get Manifest History</a> </li>
+            <li><a href="#sc_06">Process Author Rating</a> </li>
+            <li><a href="#sc_07">Process Permissions</a> </li>
+        </ol>
+
+        <h3>Screens</h3>
+        <h5 id="sc_01"><u>Main/Home Screen</u></h5>
+        The following is the main/home screen of the tool. From this screen, the user can perform the required download/processing tasks.
+        <br>
+        <img src="assets/img/sc_01.png" height="445" width="379"/>
+        <br>
+
+        <h5 id="sc_02"><u>Download F-Droid Repository</u></h5>
+        The following screen is utilized to download the F-Droid repository. The download location needs to be procreated and provided prior to starting the process. The database will also be created in this location.
+        <br>
+        <img src="assets/img/sc_02.PNG" height="686" width="1357"/>
+        <br>
+
+        <h5 id="sc_03"><u>Download Android Projects</u></h5>
+        The following screen is utilized to download the Android project repositories. The download location needs to be procreated and provided prior to starting the process. Database location should point to the 'database.sqlite' file created in the previous step.
+        <br>
+        <img src="assets/img/sc_03.PNG" height="595" width="1356"/>
+        <br>
+
+        <h5 id="sc_04"><u>Get Project Commit History</u></h5>
+        The following screen is utilized to download the commit history for the Android projects. The database location should point to the 'database.sqlite' file and the download location should point to same location entered in the previous step.
+        <br>
+        <img src="assets/img/sc_04.png" height="497" width="570"/>
+        <br>
+
+        <h5 id="sc_05"><u>Get Manifest History</u></h5>
+        The following screen is utilized to download manifest file history of the Android project. The database location should point to the 'database.sqlite' file and the download location should point to same location entered in the previous step.
+        <br>
+        <img src="assets/img/sc_05.png" height="503" width="572"/>
+        <br>
+
+        <h5 id="sc_06"><u>Process Author Rating</u></h5>
+        The following screen is utilized to calculate the author rating (i.e. Developer Commit Ratio). The tool outputs the data into a CSV file. The database location should point to the 'database.sqlite' file. The CVS output location should be created prior to running the tool (delete the csv file if already exists in the location).
+        <br>
+        <img src="assets/img/sc_06.png" height="590" width="1354"/>
+        <br>
+
+        <h5 id="sc_07"><u>Process Permissions</u></h5>
+        The following screen is utilized to provide a Add/Remove history of the permissions associated with an app. The tool outputs the data into a CSV file. The database location should point to the 'database.sqlite' file. The CVS output location should be created prior to running the tool (delete the csv file if already exists in the location).
+        <br>
+        <img src="assets/img/sc_07.png" height="577" width="1358"/>
+        <br>
+
+        </p>
+
+        <br>
+
+        <a href="index.html"><i class="fa fa-home w3-text-theme" style="font-size:23px;"></i></a>
+        &nbsp;<i class="fa fa-ellipsis-v w3-text-theme" style="font-size:15px;"></i>&nbsp;
+        <a href="tools.html"><i class="fa fa-wrench w3-text-theme" style="font-size:23px;"></i></a>
+        &nbsp;<i class="fa fa-ellipsis-v w3-text-theme" style="font-size:15px;"></i>&nbsp;
+        <a href="contact.html"><i class="fa fa-comment w3-text-theme" style="font-size:23px;"></i></a>
+
+    </div>
+</div>
+</body>
+</html>
